@@ -1,2 +1,2 @@
-# Myndra
-Myndra
+# Pulsyn
+Pulsyn
