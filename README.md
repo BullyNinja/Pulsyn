@@ -1,2 +1,2 @@
-# pulsyn-core
-pulsyn-core
+# Pulsyn-core
+Pulsyn-core
