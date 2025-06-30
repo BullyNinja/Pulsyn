@@ -3,20 +3,20 @@
 A ritual OS of rhythm, memory, and presence.
 
 ## 🔮 What is Pulsyn?
-Pulsyn is a mythically-inclined digital platform that explores rhythm as a tool for reconnection—with ourselves, our systems, and our scrolls. It’s part experience, part infrastructure—part invocation.
+Pulsyn is a minimal, poetic OS designed to explore flow, memory, and presence in the digital age—blending rhythm, infrastructure, and scrolls.
 
-## 🛠️ Tech Stack
-- Framework: Next.js
-- Deployment: Vercel
-- Styling: Tailwind CSS (planned)
-- Source Control: GitHub
+## 💻 Tech Stack
+- Next.js
+- Tailwind CSS *(coming soon)*
+- Vercel
+- GitHub
 
 ## 🌐 Domains
 - [pulsyn.app](https://www.pulsyn.app) – Primary scroll
-- pulsyn.com – Redirect or brand home (coming soon)
-- pulsyn.io – Dev capsule (coming soon)
+- pulsyn.com – Brand alias (redirects to `.app`)
+- pulsyn.io – Dev docs or platform base (optional future use)
 
-## 🧪 Getting Started (Local Dev)
+## 🚀 Local Dev Setup
 
 ```bash
 git clone https://github.com/BullyNinja/Pulsyn-core.git
@@ -24,18 +24,37 @@ cd Pulsyn-core
 npm install
 npm run dev
 
-Customize tone as needed—we can co-write it together if you want a more poetic or edgy vibe.
+> ✅ Once updated, commit & push. Your scroll intro is now clean and public.
 
 ---
 
-## 🌅 2. Deploy First Scroll (Landing Page)
+## 🌅 3. Deploy a Styled Landing Scroll
 
-You can start with:
+Let’s drop a minimal but stylized homepage using **Next.js + Tailwind CSS**.
 
-### Option A – Minimal HTML
+### 🧵 Install Tailwind CSS
 
-Create a simple `index.html` inside `public` (or root):
+In your root project folder:
 
-```html
-<h1>Welcome to Pulsyn</h1>
-<p>A ritual OS is forming.</p>
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+theme: {
+  extend: {},
+},
+plugins: [],
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+import '../styles/globals.css'
+export default function Home() {
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-black text-white">
+      <div className="text-center space-y-4">
+        <h1 className="text-4xl font-bold tracking-wide">Pulsyn</h1>
+        <p className="text-lg">A ritual OS of rhythm, memory, and presence.</p>
+      </div>
+    </main>
+  );
+}
